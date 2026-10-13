@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alienforhumans.github.io/sitemap.xml

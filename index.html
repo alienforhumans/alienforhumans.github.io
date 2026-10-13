@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://alienforhumans.github.io/" />
     <meta name="theme-color" content="#f8f7fa" />
     <meta name="author" content="Gurgen Varzhapetyan" />
     <meta name="robots" content="index, follow" />
@@ -12,32 +13,68 @@
       content="Gurgen Varzhapetyan — Full-Stack Software Engineer building production web applications and B2B SaaS platforms."
     />
     <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://alienforhumans.github.io/" />
+    <meta property="og:site_name" content="Gurgen Varzhapetyan" />
     <meta property="profile:first_name" content="Gurgen" />
     <meta property="profile:last_name" content="Varzhapetyan" />
     <meta property="og:title" content="Gurgen Varzhapetyan — Full-Stack Software Engineer" />
     <meta property="og:description" content="Full-stack software engineer building production web applications, B2B SaaS platforms, and APIs." />
     <meta property="og:locale" content="en_US" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="https://alienforhumans.github.io/social-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Gurgen Varzhapetyan — Full-Stack Software Engineer" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Gurgen Varzhapetyan — Full-Stack Software Engineer" />
     <meta name="twitter:description" content="Full-stack software engineer building production web applications, B2B SaaS platforms, and APIs." />
+    <meta name="twitter:image" content="https://alienforhumans.github.io/social-card.png" />
+    <meta name="twitter:image:alt" content="Gurgen Varzhapetyan — Full-Stack Software Engineer" />
     <!-- Set this to your Google Analytics 4 measurement ID (G-XXXXXXXXXX) to enable analytics. -->
     <meta name="google-analytics-id" content="" />
     <title>Gurgen Varzhapetyan — Software Engineer</title>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Gurgen Varzhapetyan",
-        "jobTitle": "Full-Stack Software Engineer",
-        "email": "gurgenvarzapetyan@gmail.com",
-        "telephone": "+37494188674",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Gyumri",
-          "addressCountry": "AM"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/in/gurgen-varzhapetyan-b9087120a/"
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://alienforhumans.github.io/#website",
+            "url": "https://alienforhumans.github.io/",
+            "name": "Gurgen Varzhapetyan",
+            "inLanguage": "en"
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://alienforhumans.github.io/#profile",
+            "url": "https://alienforhumans.github.io/",
+            "name": "Gurgen Varzhapetyan — Full-Stack Software Engineer",
+            "description": "Resume and selected software engineering work of Gurgen Varzhapetyan.",
+            "inLanguage": "en",
+            "isPartOf": { "@id": "https://alienforhumans.github.io/#website" },
+            "mainEntity": { "@id": "https://alienforhumans.github.io/#person" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://alienforhumans.github.io/#person",
+            "name": "Gurgen Varzhapetyan",
+            "url": "https://alienforhumans.github.io/",
+            "jobTitle": "Full-Stack Software Engineer",
+            "description": "Software engineer building production web applications, B2B SaaS platforms, and APIs.",
+            "email": "mailto:gurgenvarzapetyan@gmail.com",
+            "telephone": "+37494188674",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Gyumri",
+              "addressCountry": "AM"
+            },
+            "worksFor": { "@type": "Organization", "name": "Brain Fors" },
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "National Polytechnic University of Armenia, Gyumri Branch"
+            },
+            "knowsAbout": ["TypeScript", "React", "Next.js", "Node.js", "NestJS", "PostgreSQL", "AWS"],
+            "sameAs": ["https://www.linkedin.com/in/gurgen-varzhapetyan-b9087120a/"]
+          }
         ]
       }
     </script>
