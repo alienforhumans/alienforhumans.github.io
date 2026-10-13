@@ -320,6 +320,7 @@ svg { display: block; flex: 0 0 auto; }
 .button-primary:hover { background: var(--green-deep); box-shadow: none; }
 .section-frame { opacity: 1; transform: none; transition: border-color .25s ease; }
 .section-frame.is-visible { animation: section-enter .45s ease both; }
+.hero.section-frame.is-visible { animation: none; }
 @keyframes section-enter { from { opacity: .72; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 .nav-item svg, .button svg, .contact-row > svg, .brand-mark, .contact-icon, .project-mark {
   transition: transform .22s ease, color .22s ease, background-color .22s ease;
