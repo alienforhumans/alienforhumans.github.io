@@ -80,6 +80,8 @@ function ParticleField({ theme }: { theme: Theme }) {
       vx: (Math.random() - 0.5) * 0.12, vy: (Math.random() - 0.5) * 0.12,
     }))
     let frame = 0
+    let startTimer = 0
+    let active = false
     let width = 0
     let height = 0
     let pixelRatio = 1
@@ -121,21 +123,47 @@ function ParticleField({ theme }: { theme: Theme }) {
           if (particle.y < -0.03 || particle.y > 1.03) particle.vy *= -1
         }
       }
-      if (!reducedMotion.matches) frame = window.requestAnimationFrame(draw)
+      if (active && !document.hidden) frame = window.requestAnimationFrame(draw)
     }
-    const onPointerMove = (event: PointerEvent) => { pointer.x = event.clientX; pointer.y = event.clientY }
+    const startAnimation = () => {
+      if (active || reducedMotion.matches || document.hidden) return
+      window.clearTimeout(startTimer)
+      active = true
+      frame = window.requestAnimationFrame(draw)
+    }
+    const scheduleAnimation = () => { startTimer = window.setTimeout(startAnimation, 5000) }
+    const onPointerMove = (event: PointerEvent) => {
+      pointer.x = event.clientX
+      pointer.y = event.clientY
+      startAnimation()
+    }
     const onPointerLeave = () => { pointer.x = -1000; pointer.y = -1000 }
+    const onResize = () => { resize(); if (!active) draw() }
+    const onVisibilityChange = () => {
+      if (document.hidden) {
+        active = false
+        window.cancelAnimationFrame(frame)
+      } else {
+        startAnimation()
+      }
+    }
     resize()
     draw()
-    window.addEventListener('resize', resize)
+    if (document.readyState === 'complete') scheduleAnimation()
+    else window.addEventListener('load', scheduleAnimation, { once: true })
+    window.addEventListener('resize', onResize)
     window.addEventListener('pointermove', onPointerMove, { passive: true })
     document.addEventListener('pointerleave', onPointerLeave)
+    document.addEventListener('visibilitychange', onVisibilityChange)
     window.addEventListener('blur', onPointerLeave)
     return () => {
       window.cancelAnimationFrame(frame)
-      window.removeEventListener('resize', resize)
+      window.clearTimeout(startTimer)
+      window.removeEventListener('load', scheduleAnimation)
+      window.removeEventListener('resize', onResize)
       window.removeEventListener('pointermove', onPointerMove)
       document.removeEventListener('pointerleave', onPointerLeave)
+      document.removeEventListener('visibilitychange', onVisibilityChange)
       window.removeEventListener('blur', onPointerLeave)
     }
   }, [theme])
