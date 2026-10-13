@@ -20,6 +20,9 @@ Update the image preload in `index.html` to `/portrait.jpg` at the same time.
 
 The CV download is served from `public/Gurgen-Varzhapetyan-CV.pdf`.
 
+The site self-hosts DM Sans, Manrope, and DM Mono as Latin WOFF2 files in
+`public/fonts`. Their SIL Open Font License files are stored alongside them.
+
 ## Deploy to GitHub Pages
 
 This repository is named `alienforhumans.github.io`, so GitHub Pages serves it at
