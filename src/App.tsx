@@ -43,7 +43,7 @@ function Icon({ name, size = 18 }: { name: IconName; size?: number }) {
 
 function Portrait() {
   if (profile.portraitSrc) {
-    return <img className="portrait-image" src={profile.portraitSrc} alt={`${profile.name} portrait placeholder`} width="134" height="134" fetchPriority="high" />
+    return <img className="portrait-image" src={profile.portraitSrc} alt={`${profile.name} portrait`} width="134" height="134" fetchPriority="high" />
   }
 
   return (

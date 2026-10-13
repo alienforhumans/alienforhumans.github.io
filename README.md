@@ -21,8 +21,10 @@ preload and Person schema image URL in `index.html` as well.
 
 The CV download is served from `public/Gurgen-Varzhapetyan-CV.pdf`.
 
-The site self-hosts DM Sans, Manrope, and DM Mono as Latin WOFF2 files in
-`public/fonts`. Their SIL Open Font License files are stored alongside them.
+The site self-hosts DM Sans, Manrope, and DM Mono as WOFF2 files in
+`public/fonts`. They are subset to the current English text and punctuation;
+regenerate them when adding new characters. Their SIL Open Font License files
+are stored alongside them.
 
 ## Deploy to GitHub Pages
 
