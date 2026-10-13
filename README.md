@@ -16,6 +16,7 @@ Open the local URL printed by Vite. To create a production build, run `pnpm buil
 ## Add a portrait later
 
 Place the image at `public/portrait.jpg`, then set `portraitSrc` to `'/portrait.jpg'` in `src/data.ts`. The existing portrait component will display it in the current layout.
+Update the image preload in `index.html` to `/portrait.jpg` at the same time.
 
 The CV download is served from `public/Gurgen-Varzhapetyan-CV.pdf`.
 
