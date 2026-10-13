@@ -8,8 +8,8 @@ export const profile = {
   phoneLabel: '+374 94 188 674',
   linkedIn: 'https://www.linkedin.com/in/gurgen-varzhapetyan-b9087120a/',
   cvPath: '/Gurgen-Varzhapetyan-CV.pdf',
-  // Replace the placeholder asset with a portrait at any time.
-  portraitSrc: '/portrait-placeholder.svg' as string | null,
+  // Change this path when replacing the portrait asset.
+  portraitSrc: '/portrait.jpg' as string | null,
   headline: 'Software Engineer | Full-Stack | TypeScript · React · Next.js · NestJS · PostgreSQL · AWS · AI-assisted development',
   summary:
     'I build production web applications, B2B SaaS platforms, and APIs. I started in frontend development and grew into full-stack engineering, taking ownership of backend architecture, database design, business logic, integrations, authentication, and production infrastructure.',
